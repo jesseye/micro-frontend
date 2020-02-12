@@ -1,0 +1,53 @@
+{
+  "name": "micro-app",
+  "version": "1.0.0",
+  "description": "micro-frontend application starter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dll": "cross-env NODE_ENV=production node --max_old_space_size=2048 ./node_modules/webpack/bin/webpack.js --config ./config/webpack.config.vendors.js",
+    "start": "webpack-dev-server --open --config ./config/webpack.config.dev.js",
+    "build-dev": "cross-env NODE_ENV=production node --max_old_space_size=2048 ./node_modules/webpack/bin/webpack.js --config ./config/webpack.config.dev.js",
+    "build": "cross-env NODE_ENV=production node --max_old_space_size=2048 ./node_modules/webpack/bin/webpack.js --config ./config/webpack.config.prod.js",
+    "debug-webpack-start": "node --inspect-brk=5858 --max_old_space_size=2048 ./node_modules/webpack/bin/webpack.js --config ./config/webpack.config.dev.js"
+  },
+  "author": "Hugo Ye",
+  "license": "ISC",
+  "dependencies": {
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-intl": "^3.12.0",
+    "react-redux": "^7.1.3",
+    "redux": "4.0.5",
+    "redux-promise": "^0.6.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.8.4",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/preset-env": "7.8.4",
+    "@babel/preset-react": "7.8.3",
+    "babel-loader": "8.0.6",
+    "clean-webpack-plugin": "3.0.0",
+    "copy-webpack-plugin": "5.1.1",
+    "css-loader": "3.4.2",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.18.3",
+    "eslint-plugin-react-hooks": "1.7.0",
+    "file-loader": "5.0.2",
+    "html-webpack-plugin": "3.2.0",
+    "less": "^3.10.3",
+    "less-loader": "5.0.0",
+    "mini-css-extract-plugin": "0.9.0",
+    "style-loader": "1.1.3",
+    "uglifyjs-webpack-plugin": "2.2.0",
+    "url-loader": "3.0.0",
+    "webpack": "4.41.5",
+    "webpack-cli": "3.3.10",
+    "webpack-dev-server": "3.10.3",
+    "webpack-merge": "4.2.2"
+  }
+}
